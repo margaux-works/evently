@@ -89,7 +89,8 @@ When I confirm my selection
 Then I should see a list of events from the selected city
 
 **Feature 2: Show/Hide Event Details**
-Scenario: User views and hides event details
+
+- Scenario: User views and hides event details
 
 Given the user is viewing a list of events,
 When the user selects an event to see its details,
@@ -100,14 +101,15 @@ When the user chooses to hide the event details,
 Then the details should be hidden from view.
 
 **Feature 3: Specify Number of Events**
-Scenario: User specifies the number of events displayed
+
+- Scenario: User specifies the number of events displayed
 
 Given the user is on the events list page,
 When the user selects a number of events to display,
 Then only the specified number of events should be shown.
 
 **Feature 4: Use the App When Offline**
-Scenario: User accesses the app while offline
+-Scenario: User accesses the app while offline
 
 Given the user has previously accessed the app online,
 And the app has cached event data,
@@ -115,14 +117,16 @@ When the user opens the app without an internet connection,
 Then the user should be able to view event data offline.
 
 **Feature 5: Add an App Shortcut to the Home Screen**
-Scenario: User adds the app to the Home Screen
+
+- Scenario: User adds the app to the Home Screen
 
 Given the user is on the app’s main page,
 When the user selects the option to add the app to their Home Screen,
 Then a shortcut to the app should be added to the user's Home Screen.
 
 **Feature 6: Display Charts Visualizing Event Details**
-Scenario: User views charts visualizing event details
+
+- Scenario: User views charts visualizing event details
 
 Given the user is viewing a specific event,
 When the user navigates to the event details section,
