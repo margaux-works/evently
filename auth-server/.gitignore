@@ -3,4 +3,6 @@ node_modules
 serverless-state.json
 
 config.json
-.env
+handler.js
+package.json
+serverless.yml
