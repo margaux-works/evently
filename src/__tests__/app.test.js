@@ -1,3 +1,4 @@
+/* eslint-disable testing-library/render-result-naming-convention */
 /* eslint-disable testing-library/no-render-in-setup */
 /* eslint-disable testing-library/no-node-access */
 import { render, within } from '@testing-library/react';
@@ -45,5 +46,22 @@ describe('<App /> integration', () => {
     allRenderedEventItems.forEach((event) => {
       expect(event.textContent).toContain('Berlin, Germany');
     });
+  });
+  test('render the correct numbers of event when user changes the number of events input', async () => {
+    const user = userEvent.setup();
+    const AppComponent = render(<App />);
+    const AppDOM = AppComponent.container.firstChild;
+
+    const NumberOfEventsDOM = AppDOM.querySelector('#number-of-events');
+    const NumberOfEventsInput = within(NumberOfEventsDOM).queryByTestId(
+      'number-of-events-input'
+    );
+
+    await user.type(NumberOfEventsInput, '{backspace}{backspace}10');
+
+    const EventListDOM = AppDOM.querySelector('#event-list');
+    const allRenderedEventItems =
+      within(EventListDOM).queryAllByRole('listitem');
+    expect(allRenderedEventItems.length).toBe(10);
   });
 });

@@ -1,19 +1,19 @@
 /* eslint-disable jsx-a11y/no-redundant-roles */
 import { useState } from 'react';
 
-const NumberOfEvents = ({ setCurrentNOE, setErrorAlert }) => {
-  const [number, setNumber] = useState(32); // default to 32 events
+const NumberOfEvents = ({ currentNOE, setCurrentNOE, setErrorAlert }) => {
+  const [number, setNumber] = useState(currentNOE); // default to 32 events
 
   const handleInputChanged = (event) => {
     const value = event.target.value;
     setNumber(value);
     const numericValue = Number(value);
 
-    if (isNaN(numericValue) || numericValue <= 0) {
-      setErrorAlert('Oops: Please enter a valid number'); // Set an error message if the value is invalid
+    if (isNaN(value) || numericValue <= 0) {
+      setErrorAlert('Oops: Please enter a valid number');
     } else {
-      setErrorAlert(''); // Clear any previous error
-      setCurrentNOE(numericValue); // Update the number of events
+      setErrorAlert('');
+      setCurrentNOE(value);
     }
   };
 
