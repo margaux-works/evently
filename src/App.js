@@ -33,6 +33,7 @@ function App() {
 
   return (
     <div className="App">
+      <h1 id="title">WebDev MeetUp Events</h1>
       <CitySearch allLocations={allLocations} setCurrentCity={setCurrentCity} />
       <NumberOfEvents
         currentNOE={currentNOE}

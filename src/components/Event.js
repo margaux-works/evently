@@ -4,17 +4,12 @@ const Event = ({ event }) => {
   const [showDetails, setShowDetails] = useState(false);
 
   return (
-    <li>
-      <div className="event">
-        <h3>{event.summary}</h3>
-        <p>{event.created}</p>
-        <p>{event.location}</p>
-      </div>
-      {showDetails ? (
-        <div className="eventDetails">
-          <p>{event.description}</p>
-        </div>
-      ) : null}
+    <li className="event">
+      <h3>{event.summary}</h3>
+      <p>{event.created}</p>
+      <p id="location">{event.location}</p>
+
+      {showDetails ? <p className="eventDetails">{event.description}</p> : null}
       <button
         className="showDetailsBtn"
         onClick={() => setShowDetails(!showDetails)}
