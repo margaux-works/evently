@@ -1,6 +1,6 @@
 /* eslint-disable testing-library/prefer-screen-queries */
 /* eslint-disable testing-library/no-render-in-setup */
-import { render } from '@testing-library/react';
+import { getByTestId, render } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import NumberOfEvents from '../components/NumberOfEvents';
 
@@ -8,7 +8,11 @@ describe('NumberOfEvents Component', () => {
   let NumberOfEventsComponent;
   beforeEach(() => {
     NumberOfEventsComponent = render(
-      <NumberOfEvents setCurrentNOE={() => {}} setErrorAlert={() => {}} />
+      <NumberOfEvents
+        currentNOE={32}
+        setCurrentNOE={() => {}}
+        setErrorAlert={() => {}}
+      />
     );
   });
 
@@ -19,12 +23,9 @@ describe('NumberOfEvents Component', () => {
   });
 
   test('default number is 32', () => {
-    const { getByLabelText } = render(
-      <NumberOfEvents setCurrentNOE={() => {}} setErrorAlert={() => {}} />
+    const inputElement = NumberOfEventsComponent.getByTestId(
+      'number-of-events-input'
     );
-
-    const inputElement = getByLabelText('Number of Events:');
-
     expect(inputElement).toHaveValue(32);
   });
 
