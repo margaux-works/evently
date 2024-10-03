@@ -55,11 +55,47 @@ input[type='number'] {
   width: 250px;
 }
 
-#city-search {
+/* #city-search {
   display: flex;
   flex-direction: column;
   margin: auto;
   position: relative;
+} */
+
+#city-search {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+#number-of-events {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+/* InfoAlert and ErrorAlert as bubbles near input fields */
+.Alert {
+  position: absolute;
+  left: 10px; /* Align the alert bubble near the input field */
+  top: -10px; /* Adjust this value to move the alert above the input field */
+  z-index: 1;
+  white-space: nowrap;
+}
+
+/* Arrow adjustments for the alert bubble */
+.Alert span {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 10px 10px 10px 0; /* Arrow pointing left */
+  border-color: transparent var(--background-color-lighter) transparent
+    transparent; /* Background color of the alert */
+  top: 50%; /* Vertically center the arrow relative to the alert */
+  left: -10px; /* Position the arrow at the left edge of the alert */
+  transform: translateY(-50%); /* Adjust the arrow vertically */
 }
 
 .suggestions {

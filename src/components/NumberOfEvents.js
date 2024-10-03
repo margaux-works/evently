@@ -1,7 +1,13 @@
 /* eslint-disable jsx-a11y/no-redundant-roles */
 import { useState } from 'react';
+import { ErrorAlert } from './Alert';
 
-const NumberOfEvents = ({ currentNOE, setCurrentNOE, setErrorAlert }) => {
+const NumberOfEvents = ({
+  currentNOE,
+  setCurrentNOE,
+  setErrorAlert,
+  errorAlert,
+}) => {
   const [number, setNumber] = useState(currentNOE); // default to 32 events
 
   const handleInputChanged = (event) => {
@@ -31,6 +37,7 @@ const NumberOfEvents = ({ currentNOE, setCurrentNOE, setErrorAlert }) => {
         onChange={handleInputChanged}
         data-testid="number-of-events-input"
       />
+      {errorAlert && <ErrorAlert text={errorAlert} />}
     </div>
   );
 };
