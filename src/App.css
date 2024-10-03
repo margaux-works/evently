@@ -47,6 +47,8 @@ input[type='number'] {
   align-self: center;
   height: 38px;
   margin-bottom: 20px;
+  background-color: var(--background-color-lighter);
+  color: var(--text-color);
 }
 
 .city {
@@ -109,8 +111,8 @@ h3 {
   position: absolute;
   width: 8rem;
   height: 2rem;
-  right: 40%;
-  bottom: 5px;
+  right: 30px;
+  bottom: 10px;
   padding: 5px 8px;
   border: none;
   border-radius: 24px;
