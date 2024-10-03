@@ -2,7 +2,7 @@
 
 :root {
   --primary-color: #7c5dfa;
-  --secondary-color: #ec5757;
+  --secondary-color: #dfe3fa;
   --background-color: #141625;
   --background-color-lighter: #1e2139;
   --text-color: #fff;
@@ -96,7 +96,7 @@ input[type='number'] {
   padding: 10px 10px 35px;
   margin-bottom: 10px;
   text-align: left;
-  border: 1px solid #ccc;
+  border: 1px solid #7e88c3;
   border-radius: 4px;
   position: relative;
   background-color: var(--background-color-lighter);
@@ -124,4 +124,12 @@ h3 {
 
 .showDetailsBtn:hover {
   background-color: #9277ff;
+}
+
+.alerts-container {
+  position: fixed;
+  top: 10px;
+  right: 20px;
+  width: 250px;
+  z-index: 1000;
 }

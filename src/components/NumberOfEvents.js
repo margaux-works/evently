@@ -9,8 +9,10 @@ const NumberOfEvents = ({ currentNOE, setCurrentNOE, setErrorAlert }) => {
     setNumber(value);
     const numericValue = Number(value);
 
+    let alertText;
     if (isNaN(value) || numericValue <= 0) {
-      setErrorAlert('Oops: Please enter a valid number');
+      alertText = 'Please enter a valid number.';
+      setErrorAlert(alertText);
     } else {
       setErrorAlert('');
       setCurrentNOE(value);
