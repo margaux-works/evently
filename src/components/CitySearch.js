@@ -1,15 +1,11 @@
 import { useState, useEffect } from 'react';
 import { InfoAlert } from './Alert';
 
-const CitySearch = ({
-  allLocations,
-  setCurrentCity,
-  setInfoAlert,
-  infoAlert,
-}) => {
+const CitySearch = ({ allLocations, setCurrentCity }) => {
   const [showSuggestions, setShowSuggestions] = useState(false);
   const [query, setQuery] = useState('');
   const [suggestions, setSuggestions] = useState([]);
+  const [infoAlert, setInfoAlert] = useState('');
 
   useEffect(() => {
     setSuggestions(allLocations);
@@ -46,6 +42,7 @@ const CitySearch = ({
 
   return (
     <div id="city-search">
+      <label>Search for a city: </label>
       <input
         type="text"
         className="city"

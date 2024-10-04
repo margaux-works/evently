@@ -14,8 +14,6 @@ function App() {
   const [currentNOE, setCurrentNOE] = useState(32);
   const [allLocations, setAllLocations] = useState([]);
   const [currentCity, setCurrentCity] = useState('See all cities');
-  const [errorAlert, setErrorAlert] = useState('');
-  const [infoAlert, setInfoAlert] = useState('');
 
   useEffect(() => {
     fetchData();
@@ -36,19 +34,9 @@ function App() {
     <div className="App">
       <h1 id="title">WebDev MeetUp Events</h1>
       <div className="alerts-container"></div>
-      <CitySearch
-        allLocations={allLocations}
-        setCurrentCity={setCurrentCity}
-        setInfoAlert={setInfoAlert}
-        infoAlert={infoAlert}
-      />
+      <CitySearch allLocations={allLocations} setCurrentCity={setCurrentCity} />
 
-      <NumberOfEvents
-        currentNOE={currentNOE}
-        setCurrentNOE={setCurrentNOE}
-        setErrorAlert={setErrorAlert}
-        errorAlert={errorAlert}
-      />
+      <NumberOfEvents currentNOE={currentNOE} setCurrentNOE={setCurrentNOE} />
 
       <EventList events={events} />
     </div>
