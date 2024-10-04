@@ -1,8 +1,0 @@
-node_modules
-.serverless/
-serverless-state.json
-
-config.json
-handler.js
-package.json
-serverless.yml
