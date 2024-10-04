@@ -1,8 +1,10 @@
 /* eslint-disable jsx-a11y/no-redundant-roles */
 import { useState } from 'react';
+import { ErrorAlert } from './Alert';
 
-const NumberOfEvents = ({ currentNOE, setCurrentNOE, setErrorAlert }) => {
-  const [number, setNumber] = useState(currentNOE); // default to 32 events
+const NumberOfEvents = ({ currentNOE, setCurrentNOE }) => {
+  const [number, setNumber] = useState(currentNOE);
+  const [errorAlert, setErrorAlert] = useState('');
 
   const handleInputChanged = (event) => {
     const value = event.target.value;
@@ -21,7 +23,7 @@ const NumberOfEvents = ({ currentNOE, setCurrentNOE, setErrorAlert }) => {
 
   return (
     <div id="number-of-events">
-      <label htmlFor="number-of-events-input">Number of Events:</label>
+      <label htmlFor="number-of-events-input">Number of Events: </label>
       <input
         type="number"
         id="number-of-events-input"
@@ -31,6 +33,7 @@ const NumberOfEvents = ({ currentNOE, setCurrentNOE, setErrorAlert }) => {
         onChange={handleInputChanged}
         data-testid="number-of-events-input"
       />
+      {errorAlert && <ErrorAlert text={errorAlert} />}
     </div>
   );
 };

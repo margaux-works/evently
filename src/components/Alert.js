@@ -10,21 +10,41 @@ class Alert extends Component {
   getStyle = () => {
     return {
       color: this.color,
-      backgroundClor: this.bgColor,
+      backgroundColor: this.bgColor,
       borderRadius: '7px',
       fontWeight: 'bold',
-      borderColor: this.color,
+      border: `1px solid ${this.color}`,
       textAlign: 'center',
       fontSize: '0.8rem',
-      margin: '10px 0',
       padding: '10px',
+      position: 'relative',
+      display: 'inline-block',
+    };
+  };
+
+  getBubbleArrow = () => {
+    return {
+      content: '',
+      position: 'absolute',
+      width: '0',
+      height: '0',
+      borderStyle: 'solid',
+      borderWidth: '10px 10px 10px 0', // Arrow points left
+      borderColor: `transparent ${this.bgColor} transparent transparent`, // Arrow color matches the alert background
+      top: '50%', // Vertically center the arrow
+      left: '-10px', // Arrow placed at the left edge
+      transform: 'translateY(-50%)',
     };
   };
 
   render() {
     return (
-      <div className="Alert">
+      <div
+        className="Alert"
+        style={{ position: 'relative', display: 'inline-block' }}
+      >
         <p style={this.getStyle()}>{this.props.text}</p>
+        <span style={this.getBubbleArrow()}></span>
       </div>
     );
   }
