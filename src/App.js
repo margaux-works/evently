@@ -46,7 +46,9 @@ function App() {
       <CitySearch allLocations={allLocations} setCurrentCity={setCurrentCity} />
 
       <NumberOfEvents currentNOE={currentNOE} setCurrentNOE={setCurrentNOE} />
-      {warningAlert && <WarningAlert text={warningAlert} />}
+      {warningAlert && (
+        <WarningAlert text={warningAlert} className="warning-alert" />
+      )}
       <EventList events={events} />
     </div>
   );

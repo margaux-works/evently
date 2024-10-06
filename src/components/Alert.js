@@ -22,21 +22,6 @@ class Alert extends Component {
     };
   };
 
-  getBubbleArrow = () => {
-    return {
-      content: '',
-      position: 'absolute',
-      width: '0',
-      height: '0',
-      borderStyle: 'solid',
-      borderWidth: '10px 10px 10px 0', // Arrow points left
-      borderColor: `transparent ${this.bgColor} transparent transparent`, // Arrow color matches the alert background
-      top: '50%', // Vertically center the arrow
-      left: '-10px', // Arrow placed at the left edge
-      transform: 'translateY(-50%)',
-    };
-  };
-
   render() {
     return (
       <div
@@ -44,7 +29,6 @@ class Alert extends Component {
         style={{ position: 'relative', display: 'inline-block' }}
       >
         <p style={this.getStyle()}>{this.props.text}</p>
-        <span style={this.getBubbleArrow()}></span>
       </div>
     );
   }
@@ -54,7 +38,7 @@ class InfoAlert extends Alert {
   constructor(props) {
     super(props);
     this.color = 'rgb(124, 93, 250)';
-    this.bgColor = 'rgb(248, 248, 255)';
+    this.bgColor = 'transparent';
   }
 }
 
@@ -62,7 +46,7 @@ class ErrorAlert extends Alert {
   constructor(props) {
     super(props);
     this.color = 'rgb(236, 87, 87)';
-    this.bgColor = 'rgb(220, 220, 255)';
+    this.bgColor = 'transparent';
   }
 }
 
@@ -70,7 +54,7 @@ class WarningAlert extends Alert {
   constructor(props) {
     super(props);
     this.color = 'rgb(247, 181, 49)';
-    this.bgColor = 'rgb(220, 220, 255)';
+    this.bgColor = 'transparent';
   }
 }
 

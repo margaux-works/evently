@@ -23,16 +23,18 @@ const NumberOfEvents = ({ currentNOE, setCurrentNOE }) => {
 
   return (
     <div id="number-of-events">
-      <label htmlFor="number-of-events-input">Number of Events: </label>
-      <input
-        type="number"
-        id="number-of-events-input"
-        role="textbox"
-        className="number-of-events-input"
-        value={number}
-        onChange={handleInputChanged}
-        data-testid="number-of-events-input"
-      />
+      <div className="noe-container">
+        <label htmlFor="number-of-events-input">Number of Events: </label>
+        <input
+          type="number"
+          id="number-of-events-input"
+          role="textbox"
+          className="number-of-events-input"
+          value={number}
+          onChange={handleInputChanged}
+          data-testid="number-of-events-input"
+        />
+      </div>
       {errorAlert && <ErrorAlert text={errorAlert} />}
     </div>
   );

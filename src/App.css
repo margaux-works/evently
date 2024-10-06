@@ -53,57 +53,33 @@ input[type='number'] {
 
 .city {
   width: 250px;
+  margin-left: 10px;
 }
-
-/* #city-search {
-  display: flex;
-  flex-direction: column;
-  margin: auto;
-  position: relative;
-} */
 
 #city-search {
-  position: relative;
   display: flex;
+  flex-direction: column;
   align-items: center;
+  width: 100%;
 }
 
-#number-of-events {
-  position: relative;
+.city-search-container {
   display: flex;
+  justify-content: center;
   align-items: center;
+  width: auto;
 }
 
-/* InfoAlert and ErrorAlert as bubbles near input fields */
-.Alert {
-  position: absolute;
-  left: 10px; /* Align the alert bubble near the input field */
-  top: -10px; /* Adjust this value to move the alert above the input field */
-  z-index: 1;
-  white-space: nowrap;
-}
-
-/* Arrow adjustments for the alert bubble */
-.Alert span {
-  content: '';
-  position: absolute;
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 10px 10px 10px 0; /* Arrow pointing left */
-  border-color: transparent var(--background-color-lighter) transparent
-    transparent; /* Background color of the alert */
-  top: 50%; /* Vertically center the arrow relative to the alert */
-  left: -10px; /* Position the arrow at the left edge of the alert */
-  transform: translateY(-50%); /* Adjust the arrow vertically */
+.input-suggestions-wrapper {
+  position: relative; /* Allows absolute positioning of suggestions */
+  width: 250px; /* Match the input field width */
 }
 
 .suggestions {
-  width: 250px;
+  width: 100%;
   position: absolute;
-  top: 45px;
+  top: 40px;
   z-index: 2;
-  align-self: center;
   margin: 0;
   font-size: 14px;
   box-shadow: 10px 10px 16px -12px rgba(0, 0, 0, 0.75);
@@ -128,6 +104,21 @@ input[type='number'] {
   color: var(--text-color);
 }
 
+#number-of-events {
+  position: relative;
+  align-items: center;
+}
+/* InfoAlert and ErrorAlert as bubbles near input fields */
+.Alert {
+  position: absolute;
+  left: 10px;
+  top: 5px;
+  z-index: 1;
+  white-space: nowrap;
+  padding-bottom: 10px;
+  display: block;
+}
+
 .event {
   padding: 10px 10px 35px;
   margin-bottom: 10px;
@@ -141,6 +132,11 @@ input[type='number'] {
 h3 {
   color: var(--secondary-color);
   font-size: 1.5rem;
+}
+
+.line {
+  border-top: 1px solid var(--primary-color);
+  margin: 10px 0;
 }
 
 .showDetailsBtn {

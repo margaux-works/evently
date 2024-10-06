@@ -42,27 +42,32 @@ const CitySearch = ({ allLocations, setCurrentCity }) => {
 
   return (
     <div id="city-search">
-      <label>Search for a city: </label>
-      <input
-        type="text"
-        className="city"
-        placeholder="Search for a city"
-        value={query}
-        onFocus={() => setShowSuggestions(true)}
-        onChange={handleInputChanged}
-      />
-      {showSuggestions && (
-        <ul className="suggestions">
-          {suggestions.map((suggestion) => (
-            <li onClick={handleItemClicked} key={suggestion}>
-              {suggestion}
-            </li>
-          ))}
-          <li key="See all cities" onClick={handleItemClicked}>
-            <b>See all cities</b>
-          </li>
-        </ul>
-      )}
+      <div className="city-search-container">
+        <label> Search for a city: </label>
+        <div className="input-suggestions-wrapper">
+          <input
+            type="text"
+            className="city"
+            placeholder="Search for a city"
+            value={query}
+            onFocus={() => setShowSuggestions(true)}
+            onChange={handleInputChanged}
+          />
+
+          {showSuggestions && (
+            <ul className="suggestions">
+              {suggestions.map((suggestion) => (
+                <li onClick={handleItemClicked} key={suggestion}>
+                  {suggestion}
+                </li>
+              ))}
+              <li key="See all cities" onClick={handleItemClicked}>
+                <b>See all cities</b>
+              </li>
+            </ul>
+          )}
+        </div>
+      </div>
       {infoAlert && <InfoAlert text={infoAlert} />}
     </div>
   );
