@@ -25,14 +25,17 @@ The **Event App** is a serverless, progressive web application (PWA) built with 
 - **Google Calendar API**: Fetches event data using OAuth2 authentication.
 - **AWS Lambda**: Serverless functions used for authentication.
 - **Chart.js**: Library used for visualizing event data.
-- **Jest/Enzyme**: Tools for unit and integration testing.
+- **Jest/Cucumber**: Tools for unit and integration testing.
 - **Workbox**: Service worker integration for offline functionality.
 - **JavaScript (ES2015+)**: Modern JavaScript for handling logic.
 - **CSS/SCSS**: Stylesheets for responsive design.
 
 ## Screenshots
 
-Will be added later
+Desktop View
+![Meet App desktop screenshot](./public/assets/desktop-view.png)
+![Meet App Mobile screenshot](./public/assets/mobile-view.png)
+![Meet App Mobile Event screenshot](./public/assets/mobile2-view.png)
 
 ## Development Process
 
@@ -134,7 +137,7 @@ Then charts visualizing the event’s data should be displayed.
 
 ## Development Status
 
-🚧 **This project is currently in development.**
+This project is completed
 
 ## Deployment
 
