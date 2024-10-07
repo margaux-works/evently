@@ -119,6 +119,18 @@ input[type='number'] {
   display: block;
 }
 
+.charts-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+@media (max-width: 768px) {
+  .charts-container {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
+
 .event {
   padding: 10px 10px 35px;
   margin-bottom: 10px;
