@@ -32,10 +32,9 @@ The **Event App** is a serverless, progressive web application (PWA) built with 
 
 ## Screenshots
 
-Desktop View
-![Meet App desktop screenshot](./public/assets/desktop-view.png)
-![Meet App Mobile screenshot](./public/assets/mobile-view.png)
-![Meet App Mobile Event screenshot](./public/assets/mobile2-view.png)
+<img src="./public/assets/desktop-view.png" alt="Meet App desktop screenshot" width="400" />
+<img src="./public/assets/mobile-view.png" alt="Meet App Mobile screenshot" width="300" />
+<img src="./public/assets/mobile2-view.png" alt="Meet App Mobile Event screenshot" width="300" />
 
 ## Development Process
 
