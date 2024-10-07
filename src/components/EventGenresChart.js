@@ -1,4 +1,4 @@
-import { PieChart, Pie, Sector, Cell, ResponsiveContainer } from 'recharts';
+import { PieChart, Pie, Cell, ResponsiveContainer, Legend } from 'recharts';
 import { useState, useEffect } from 'react';
 
 const EventGenresChart = ({ events }) => {
@@ -21,6 +21,8 @@ const EventGenresChart = ({ events }) => {
     });
     return data;
   };
+
+  const colors = ['#EC5757', '#ff9797', '#7C5DFA', '#9277FF', '#888eb0'];
 
   const renderCustomizedLabel = ({
     cx,
@@ -57,6 +59,23 @@ const EventGenresChart = ({ events }) => {
           labelLine={false}
           label={renderCustomizedLabel}
           outerRadius={130}
+        >
+          {data.map((entry, index) => (
+            <Cell key={`cell-${index}`} fill={colors[index]} />
+          ))}
+        </Pie>
+        <Legend
+          verticalAlign="bottom"
+          layout="horizontal"
+          iconSize={10}
+          align="center"
+          width="100%"
+          wrapperStyle={{
+            fontSize: '14px',
+            marginTop: '10px',
+            padding: '10px 0',
+            color: '#dfe3fa',
+          }}
         />
       </PieChart>
     </ResponsiveContainer>
