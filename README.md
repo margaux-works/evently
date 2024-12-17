@@ -1,6 +1,6 @@
-# Meet Event App
+# EventlyApp
 
-The **Event App** is a serverless, progressive web application (PWA) built with React. It allows users to search for upcoming events in any city using the Google Calendar API, view event details, and visualize event data using charts. The app is designed to work offline, can be installed as a shortcut on mobile devices, and offers an excellent user experience across all devices. The development process follows a test-driven development (TDD) approach to ensure high-quality code.
+The **Evently App** is a serverless, progressive web application (PWA) built with React. It allows users to search for upcoming events in any city using the Google Calendar API, view event details, and visualize event data using charts. The app is designed to work offline, can be installed as a shortcut on mobile devices, and offers an excellent user experience across all devices. The development process follows a test-driven development (TDD) approach to ensure high-quality code.
 
 ## Features
 
@@ -140,7 +140,7 @@ This project is completed
 
 ## Deployment
 
-The app is deployed on GitHub Pages. You can access it [here](https://margaux-works.github.io/meet/)
+The app is deployed on GitHub Pages. You can access it [here](https://margaux-works.github.io/Evently/)
 
 ## Contributing
 
