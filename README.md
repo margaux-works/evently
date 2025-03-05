@@ -138,9 +138,6 @@ Then charts visualizing the event’s data should be displayed.
 
 This project is completed
 
-## Deployment
-
-The app is deployed on GitHub Pages. You can access it [here](https://margaux-works.github.io/Evently/)
 
 ## Contributing
 
